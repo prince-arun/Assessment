@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Second smallest number</title>
+  </head>
+  <body>
+    <script>
+      let findSmall = (arr) => {
+        console.log(
+          `In a givern array ${arr}, the second smallest number is :`
+        );
+        let result = arr.sort(function (a, b) {
+          return a - b;
+        });
+        console.log(result[1]);
+      };
+
+      findSmall([5, 2, 9, 1, 7]);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finding the substring</title>
+  </head>
+  <body>
+    <script>
+      let subString = (str, subStr) => {
+        let strL = str.length;
+        let subL = subStr.length;
+
+        let itr = 0;
+        let pos = 0;
+
+        while (pos <= strL - subL) {
+          if (str.slice(pos, pos + subL) === subStr) {
+            itr++;
+            pos += subL;
+          } else {
+            pos++;
+          }
+        }
+
+        return itr;
+      };
+
+      let inputString = "Hello, hello, hello";
+      let inputSubstring = "hello";
+      let itr = subString(
+        inputString.toLowerCase(),
+        inputSubstring.toLowerCase()
+      );
+      console.log(itr);
+    </script>
+  </body>
+</html>

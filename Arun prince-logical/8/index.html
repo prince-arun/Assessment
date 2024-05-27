@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>numbers in ascending order</title>
+  </head>
+  <body>
+    <script>
+      let ascending = (arr) => {
+        let result = arr.sort(function (a, b) {
+          return a - b;
+        });
+        console.log(result);
+      };
+
+      ascending([3, 9, 1, 4, 8]);
+    </script>
+  </body>
+</html>
